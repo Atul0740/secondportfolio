@@ -1,0 +1,264 @@
+.work {
+    width: calc(100vw - 330px);
+    min-height: 130vh;
+    border-radius: 10px;
+    background: #fff;
+    padding-left: 200px;
+}
+
+.work_banner {
+    width: 100%;
+    height: 40vh;
+    border-radius: 10px;
+    margin: 20px 0px;
+    background-image: url(https://cdn.w600.comps.canstockphoto.com/brown-gift-boxes-with-red-ribbons-and-stock-photo_csp76498340.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.work_banner p {
+    width: 90%;
+    padding: 10px;
+    bottom: 20px;
+    left: 5%;
+    background-color: rgba(80, 80, 80, 0.5);
+    color: #fff;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.title1 {
+    font-weight: bolder;
+    font-size: 80px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    color: var(--blue)
+}
+
+.active_link {
+    border-bottom: 2px solid #0554d4;
+    background-color: rgb(90, 111, 182);
+    border-radius: 10px;
+    color: white;
+}
+
+.work_sublinks {
+    width: 100%;
+    margin: 0px auto;
+}
+
+.work_sublinks nav {
+    width: fit-content;
+}
+
+.work_sublinks nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 3;
+}
+
+.work_sublinks nav ul li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.work_sublinks nav ul li a {
+    width: fit-content;
+    min-height: 30px;
+    color: rgb(214, 45, 39);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.sublinks_underline {
+    width: 100%;
+    height: 2px;
+    background: rgb(238, 238, 238);
+    margin-top: 10px;
+}
+
+.activeclass_underline {
+    width: 75px;
+    height: 2px;
+    /* background-color: #0063ff; */
+    transition: 0.3s ease-in-out;
+}
+
+
+/* Blogs Styling */
+
+.blogs {
+    width: 100%;
+    margin: 0px auto;
+    height: fit-content;
+}
+
+.blogs_container {
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.blog {
+    min-height: 250px;
+    width: 250px;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 8px 0 rgba(197, 99, 99, 0.911), 0 6px 10px 0 rgba(197, 99, 99, 0.911);
+    transition: 0.3s ease-in-out !important;
+}
+
+.blog:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.blog_image {
+    width: 100%;
+    height: 200px;
+    background: url(https://cdn.w600.comps.canstockphoto.com/brown-gift-boxes-with-red-ribbons-and-stock-photo_csp76498340.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.3s ease-in-out !important;
+}
+
+.blog:hover .blog_image {
+    transform: scale(1.05) translateY(-3%) !important;
+}
+
+.blog p {
+    padding: 5px 10px;
+}
+
+.blog_date {
+    font-size: 14px;
+    color: rgb(180, 180, 180);
+}
+
+
+/* Article Styling */
+
+.article_image {
+    width: 100%;
+    height: 200px;
+    background: url(https://cdn.w600.comps.canstockphoto.com/brown-gift-boxes-with-red-ribbons-and-stock-photo_csp76498340.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.3s ease-in-out !important;
+}
+
+.blog:hover .article_image {
+    transform: scale(1.05) translateY(-3%) !important;
+}
+
+
+/* Artwork Styling */
+
+.artwork_image {
+    width: 100%;
+    height: 200px;
+    background: url(https://cdn.w600.comps.canstockphoto.com/brown-gift-boxes-with-red-ribbons-and-stock-photo_csp76498340.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.3s ease-in-out !important;
+}
+
+.blog:hover .artwork_image {
+    transform: scale(1.05) translateY(-3%) !important;
+}
+
+
+/* Project Styling */
+
+.project_image {
+    width: 100%;
+    height: 200px;
+    background: url(https://cdn.w600.comps.canstockphoto.com/brown-gift-boxes-with-red-ribbons-and-stock-photo_csp76498340.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.3s ease-in-out !important;
+}
+
+.blog:hover .project_image {
+    transform: scale(1.05) translateY(-3%) !important;
+}
+
+
+/* Presentation styling */
+
+.presentation_image {
+    width: 100%;
+    height: 200px;
+    background: url(https://cdn.w600.comps.canstockphoto.com/brown-gift-boxes-with-red-ribbons-and-stock-photo_csp76498340.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.3s ease-in-out;
+}
+
+.blog:hover .presentation_image {
+    transform: scale(1.05) translateY(-3%) !important;
+}
+
+
+/* Skil Videos Styling */
+
+.video {
+    width: 40%;
+    object-fit: cover;
+    object-position: center;
+    margin: 10px;
+}
+
+@media only screen and (max-width:900px) {
+    .work_banner {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .work {
+        width: 100%;
+        background: #fff;
+        padding: 20px;
+    }
+    .blog {
+        width: 300px;
+        margin: 20px auto;
+    }
+    .sublinks_underline {
+        transform: translateY(0px);
+        display: none;
+    }
+    .work_sublinks nav {
+        width: 100vw;
+        height: 50px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        transform: translateX(-20px);
+    }
+    .video {
+        width: 90%;
+        margin: 10px auto;
+    }
+    .video video {
+        width: 100%;
+    }
+}
