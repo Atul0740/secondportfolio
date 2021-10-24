@@ -1,6 +1,5 @@
 import Sidebar from "./components/Sidebar/Sidebar";
 import styled from "styled-components";
-import { AnimatePresence } from "framer-motion";
 import Bio from "./components/Pages/Bio";
 import Experience from "./components/Pages/Experience";
 import Works from "./components/Pages/Works";
@@ -8,7 +7,7 @@ import Education from "./components/Pages/Education";
 import Courses from "./components/Pages/Courses";
 import Achievement from "./components/Pages/Achievement";
 import Skills from "./components/Pages/Skills";
-
+import $ from 'jquery';
 const Pages = styled.div`
   width: 100vw;
   height: 100vh;
@@ -22,12 +21,13 @@ const Pages = styled.div`
 `;
 
 function App() {
+  $(document).ready(function(){$("a[href='/work/blogs']").trigger('click'); });
 
   return (
+    
     <>
       <Sidebar />
       <Pages>
-        <AnimatePresence exitBeforeEnter>
           <Bio/>
           <Experience></Experience>
           <Works></Works>
@@ -35,7 +35,6 @@ function App() {
           <Courses></Courses>
           <Achievement></Achievement>
           <Skills></Skills>
-        </AnimatePresence>
       </Pages>
     </>
   );

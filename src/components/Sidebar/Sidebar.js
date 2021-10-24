@@ -7,6 +7,7 @@ import { HashLink } from "react-router-hash-link";
 const Container = styled.div`
   position: fixed;
   padding:10vh 0vh;
+  padding-right:0;
   .active {
     border-right: 4px solid var(--white);
 
@@ -126,6 +127,7 @@ const Logo = styled.div`
     width: 90%;
     height: auto;
   }
+  cursor:pointer;
   @media(max-width:767px)
   {
     display:none;
@@ -184,6 +186,7 @@ const Item = styled(HashLink)`
 
   display: flex;
   padding-left: 1rem;
+  padding-right:0rem;
 
   &:hover {
     border-right: 4px solid var(--white);
@@ -236,13 +239,13 @@ const Sidebar = () => {
       </Button>
         
         <SlickBar clicked={click} >
-        <Logo>
+        <Logo onClick={() => setClick(!click)}>
           <img src={logo} alt="logo" />
         </Logo>
           <Item
             onClick={() => setClick(false)}
             smooth
-            exact
+            exact="true"
             activeClassName="active"
             to="#bio"
           >

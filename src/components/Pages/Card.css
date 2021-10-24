@@ -60,3 +60,9 @@
         max-width: 60vw;
     }
 }
+
+@media(max-width:767px) {
+    .experience1 {
+        max-width: 76vw;
+    }
+}

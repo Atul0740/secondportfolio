@@ -29,7 +29,9 @@
 }
 
 .work_sublinks nav {
-    width: fit-content;
+    width: 64vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .work_sublinks nav ul {
@@ -41,6 +43,9 @@
 .work_sublinks nav ul li {
     text-decoration: none;
     list-style: none;
+    min-width: 17vw;
+    min-height: 60px;
+    text-align: center;
 }
 
 .work_sublinks nav ul li a {
@@ -109,6 +114,9 @@
         overflow-x: scroll;
         overflow-y: hidden;
     }
+    .work_sublinks nav ul li {
+        min-width: 23vw;
+    }
     .work_sublinks nav ul li a {
         font-size: 15px;
     }
@@ -124,7 +132,25 @@
     .title1 {
         font-size: 40px;
     }
+    .work_sublinks nav ul li {
+        min-width: 30vw;
+    }
+}
+
+@media(max-width:400px) {
+    .work_sublinks nav ul li {
+        min-width: 30vw;
+    }
     .work_sublinks nav ul li a {
-        font-size: 15px;
+        font-size: 12px;
+    }
+}
+
+@media(max-width:359px) {
+    .work_sublinks nav ul li {
+        min-width: 40vw;
+    }
+    .work_sublinks nav ul li a {
+        font-size: 10px;
     }
 }
