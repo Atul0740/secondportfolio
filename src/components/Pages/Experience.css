@@ -22,3 +22,18 @@
         padding-left: 26vw;
     }
 }
+
+@media(max-width:767px) {
+    .card-container {
+        padding-left: 20px;
+    }
+    .edu-title {
+        font-size: 40px;
+    }
+}
+
+@media(max-width:359px) {
+    .edu-title {
+        font-size: 30px;
+    }
+}

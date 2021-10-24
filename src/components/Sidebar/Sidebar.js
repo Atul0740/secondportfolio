@@ -15,10 +15,16 @@ const Container = styled.div`
         brightness(103%) contrast(103%);
     }
   }
-  @media(max-height:700px)
+  @media(max-width:767px)
   {
-    padding:0vh 0vh
+    padding:0
   }
+  @media(max-height:550px)
+  {
+    padding:0
+  }
+
+  
 `;
 
 const Button = styled.button`
@@ -55,8 +61,49 @@ const Button = styled.button`
     top: ${(props) => (props.clicked ? "1.2" : "1.5rem")};
     transform: ${(props) => (props.clicked ? "rotate(-135deg)" : "rotate(0)")};
   }
+  @media(max-width:767px)
+  {
+    display:none;
+  }
 `;
+const Buttons = styled.button`
+  background-color: var(--black);
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  margin: 0.5rem 0 0 0.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    background-color: var(--white);
+    height: 2px;
+    width: 1rem;
+    position: absolute;
+    transition: all 0.3s ease;
+  }
+
+  &::before {
+    top: ${(props) => (props.clicked ? "1.5" : "1rem")};
+    transform: ${(props) => (props.clicked ? "rotate(135deg)" : "rotate(0)")};
+  }
+
+  &::after {
+    top: ${(props) => (props.clicked ? "1.2" : "1.5rem")};
+    transform: ${(props) => (props.clicked ? "rotate(-135deg)" : "rotate(0)")};
+  }
+  @media(min-width:768px)
+  {
+    display:none;
+  }
+`;
 const SidebarContainer = styled.div`
   background-color: var(--black);
   width: 3.5rem;
@@ -68,9 +115,8 @@ const SidebarContainer = styled.div`
   justify-content: space-between;
 
   position: relative;
-  @media(max-width:600px)
-  {
-    width:1rem;
+  @media(max-width:767px){
+    width:0rem
   }
 `;
 
@@ -80,7 +126,11 @@ const Logo = styled.div`
     width: 90%;
     height: auto;
   }
-  @media(max-width:600px)
+  @media(max-width:767px)
+  {
+    display:none;
+  }
+  @media(max-height:700px)
   {
     display:none;
   }
@@ -102,18 +152,26 @@ const SlickBar = styled.ul`
   width: ${(props) => (props.clicked ? "12rem" : "3.5rem")};
   transition: all 0.5s ease;
   border-radius: 0 30px 30px 0;
-  @media(max-width:600px)
+  @media(max-width:767px)
   {
-    width: ${(props) => (props.clicked ? "12rem" : "1rem")};
+    width: ${(props) => (props.clicked ? "80vw" : "0rem")};
+    display:${(props) => (props.clicked ? "flex" : "none")};
     img{
       display:${(props) => (props.clicked ? "block" : "none")};
     }
+    flex-direction:row;
+    flex-wrap:wrap;
+    position: relative;
+    left: 40vw;
+    top: -10vw;
+    font-size:80%
   }
-  @media(max-height:700px)
+  @media(max-width:359px)
   {
-    top:3rem
-    
+    font-size:40%;
+    padding:0;
   }
+  
 `;
 
 const Item = styled(HashLink)`
@@ -142,6 +200,12 @@ const Item = styled(HashLink)`
     filter: invert(92%) sepia(4%) saturate(1033%) hue-rotate(169deg)
       brightness(78%) contrast(85%);
   }
+  @media(max-width:359px)
+  {
+    img{
+      width:0.5rem
+    }
+  }
 `;
 
 const Text = styled.span`
@@ -157,12 +221,16 @@ const Sidebar = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
 
+  const style={position:"relative",left:"82vw"}
   
   
 
   return (
     <Container>
-      
+      <div style={style}>
+      <Buttons clicked={click} onClick={() => handleClick()}>
+      </Buttons>
+      </div>
       <SidebarContainer>
       <Button clicked={click} onClick={() => handleClick()}>
       </Button>

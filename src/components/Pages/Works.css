@@ -105,8 +105,26 @@
     }
     .work_sublinks nav {
         width: 64vw;
-        height: 70px;
+        height: 80px;
         overflow-x: scroll;
         overflow-y: hidden;
+    }
+    .work_sublinks nav ul li a {
+        font-size: 15px;
+    }
+}
+
+@media(max-width:767px) {
+    .work-container {
+        padding-left: 20px;
+    }
+    .work_sublinks nav {
+        width: 90vw;
+    }
+    .title1 {
+        font-size: 40px;
+    }
+    .work_sublinks nav ul li a {
+        font-size: 15px;
     }
 }

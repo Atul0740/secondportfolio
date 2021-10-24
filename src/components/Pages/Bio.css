@@ -55,6 +55,7 @@
 .second-title {
     font-size: 60px;
     padding: 20px 0px;
+    font-weight: bolder;
 }
 
 video {
@@ -100,5 +101,30 @@ video {
     }
     .img-container {
         padding-right: 2vw;
+    }
+}
+
+@media(max-width:767px) {
+    .first-container {
+        flex-direction: column-reverse;
+    }
+    .first-container,
+    .support,
+    .second-container,
+    .img-container {
+        padding-left: 20px;
+    }
+    .img-container {
+        padding: 0;
+        align-self: flex-start;
+    }
+    video {
+        width: 80vw;
+    }
+    .text-container {
+        align-self: flex-start;
+    }
+    #name {
+        font-size: 50px;
     }
 }

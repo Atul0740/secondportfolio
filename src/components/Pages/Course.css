@@ -16,3 +16,9 @@
         padding-left: 26vw;
     }
 }
+
+@media(max-width:767px) {
+    .course-container {
+        padding-left: 20px;
+    }
+}

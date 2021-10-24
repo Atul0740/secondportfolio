@@ -50,3 +50,9 @@
 .course:hover .course_image {
     transform: scale(1.05) translateY(-2.5%);
 }
+
+@media(max-width:359px) {
+    .course {
+        max-width: 70vw;
+    }
+}

@@ -49,13 +49,13 @@ const Card = (props) => {
     return (
         <div ref={ref} >
             <motion.div class="experience1" animate={animation} data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                <h2 class="h2">{props.desg}</h2>
-                <h4>{props.company}</h4>
-                <span>{props.date}</span>
-                <p>
+                <h2 class="h2" style={{marginTop:"20px"}}>{props.desg}</h2>
+                <h4 style={{marginTop:"20px"}}>{props.company}</h4>
+                <span style={{marginTop:"20px"}}>{props.date}</span>
+                <p style={{marginTop:"20px"}}>
                     {props.desc}
                 </p>
-                <span>{rows}{notrows}</span>
+                <span style={{marginTop:"20px"}}>{rows}{notrows}</span>
                 <button class="div-btn" style={{marginTop:"20px"}}>{props.buttonInfo}</button>
             </motion.div>
             </div>
