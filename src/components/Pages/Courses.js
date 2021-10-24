@@ -1,44 +1,54 @@
 import React from 'react'
 import './Course.css'
-
+import CourseCard from './CourseCard'
 const Courses = () => {
     return (
         <div id='courses'>
             <div className="course-container">
             <h2 class="title1" style={{ color: "var(--blue)"}} >Courses</h2>
-            <section className="blogs">
-                <div className="blogs_container course_container" >
-                    <div className="blog" >
-                        <div className="blog_image"> </div>
-                        <p style={{ color: "rgb(214, 45, 39)" }}> The Art of Investing</p>
-                        <p style={{ color: "#0554d4" }} className="blog_date">21 Oct 2020</p>
-                    </div>
-
-                    <div className="blog" >
-                        <div className="blog_image"> </div>
-                        <p style={{ color: "rgb(214, 45, 39)" }}> The Art of Investing </p>
-                        <p style={{ color: "#0554d4" }} className="blog_date">21 Oct 2020</p>
-                    </div>
-
-                    <div className="blog" >
-                        <div className="blog_image"> </div>
-                        <p style={{ color: "rgb(214, 45, 39)" }}> The Art of Investing </p>
-                        <p style={{ color: "#0554d4" }} className="blog_date">21 Oct 2020</p>
-                    </div>
-
-                    <div className="blog" >
-                        <div className="blog_image"> </div>
-                        <p style={{ color: "rgb(214, 45, 39)" }}> The Art of Investing </p>
-                        <p style={{ color: "#0554d4" }} className="blog_date">21 Oct 2020</p>
-                    </div>
-
-                    <div className="blog" >
-                        <div className="blog_image"> </div>
-                        <p style={{ color: "rgb(214, 45, 39)" }}> The Art of Investing </p>
-                        <p style={{ color: "#0554d4" }} className="blog_date">21 Oct 2020</p>
-                    </div>
-                </div>
-                
+            <section className="course-here">
+            <CourseCard
+                    imgsrc='https://cdn.w600.comps.canstockphoto.com/brown-gift-boxes-with-red-ribbons-and-stock-photo_csp76498340.jpg'
+                    title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum facilis dolorum minus tempora ipsum ab, laboriosam aliquid a expedita ex, nesciunt, dolorem fugiat consequuntur perspiciatis labore nam saepe repellat. Dolorum!"
+                    subtitle="Duration : 6 hrs."
+                    link="https://www.instagram.com"
+                />
+                <CourseCard
+                    imgsrc='https://cdn.w600.comps.canstockphoto.com/brown-gift-boxes-with-red-ribbons-and-stock-photo_csp76498340.jpg'
+                    title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum facilis dolorum minus tempora ipsum ab, laboriosam aliquid a expedita ex, nesciunt, dolorem fugiat consequuntur perspiciatis labore nam saepe repellat. Dolorum!"
+                    subtitle="Duration : 6 hrs."
+                    link="https://www.instagram.com"
+                />
+                <CourseCard
+                    imgsrc='https://cdn.w600.comps.canstockphoto.com/brown-gift-boxes-with-red-ribbons-and-stock-photo_csp76498340.jpg'
+                    title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum facilis dolorum minus tempora ipsum ab, laboriosam aliquid a expedita ex, nesciunt, dolorem fugiat consequuntur perspiciatis labore nam saepe repellat. Dolorum!"
+                    subtitle="Duration : 6 hrs."
+                    link="https://www.instagram.com"
+                />
+                <CourseCard
+                    imgsrc='https://cdn.w600.comps.canstockphoto.com/brown-gift-boxes-with-red-ribbons-and-stock-photo_csp76498340.jpg'
+                    title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum facilis dolorum minus tempora ipsum ab, laboriosam aliquid a expedita ex, nesciunt, dolorem fugiat consequuntur perspiciatis labore nam saepe repellat. Dolorum!"
+                    subtitle="Duration : 6 hrs."
+                    link="https://www.instagram.com"
+                />
+                <CourseCard
+                    imgsrc='https://cdn.w600.comps.canstockphoto.com/brown-gift-boxes-with-red-ribbons-and-stock-photo_csp76498340.jpg'
+                    title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum facilis dolorum minus tempora ipsum ab, laboriosam aliquid a expedita ex, nesciunt, dolorem fugiat consequuntur perspiciatis labore nam saepe repellat. Dolorum!"
+                    subtitle="Duration : 6 hrs."
+                    link="https://www.instagram.com"
+                />
+                <CourseCard
+                    imgsrc='https://cdn.w600.comps.canstockphoto.com/brown-gift-boxes-with-red-ribbons-and-stock-photo_csp76498340.jpg'
+                    title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum facilis dolorum minus tempora ipsum ab, laboriosam aliquid a expedita ex, nesciunt, dolorem fugiat consequuntur perspiciatis labore nam saepe repellat. Dolorum!"
+                    subtitle="Duration : 6 hrs."
+                    link="https://www.instagram.com"
+                />
+                <CourseCard
+                    imgsrc='https://cdn.w600.comps.canstockphoto.com/brown-gift-boxes-with-red-ribbons-and-stock-photo_csp76498340.jpg'
+                    title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum facilis dolorum minus tempora ipsum ab, laboriosam aliquid a expedita ex, nesciunt, dolorem fugiat consequuntur perspiciatis labore nam saepe repellat. Dolorum!"
+                    subtitle="Duration : 6 hrs."
+                    link="https://www.instagram.com"
+                />
             </section>
             </div>
         </div>

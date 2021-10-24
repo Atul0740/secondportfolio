@@ -160,4 +160,20 @@
     /* text-decoration: underline rgb(214, 45, 39); */
 }
 
-@media(max-width:1024px) {}
+@media(max-width:1199px) {
+    .skill-bars {
+        max-width: 70vw;
+    }
+}
+
+@media(max-width:1023px) {
+    .title {
+        font-size: 60px;
+    }
+    .skill-container {
+        padding-left: 26vw;
+    }
+    .skill-bars {
+        max-width: 60vw;
+    }
+}

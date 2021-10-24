@@ -4,3 +4,15 @@
     padding-left: 20vw;
     min-height: 100vh;
 }
+
+.course-here {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+@media(max-width:1023px) {
+    .course-container {
+        padding-left: 26vw;
+    }
+}

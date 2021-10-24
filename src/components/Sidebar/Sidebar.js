@@ -15,6 +15,10 @@ const Container = styled.div`
         brightness(103%) contrast(103%);
     }
   }
+  @media(max-height:700px)
+  {
+    padding:0vh 0vh
+  }
 `;
 
 const Button = styled.button`
@@ -63,7 +67,7 @@ const SidebarContainer = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  // position: relative;
+  position: relative;
   @media(max-width:600px)
   {
     width:1rem;
@@ -92,7 +96,7 @@ const SlickBar = styled.ul`
   padding-top:1rem;
 
   position: absolute;
-  top: 8.5rem;
+  top: 3.5rem;
   left: 0;
 
   width: ${(props) => (props.clicked ? "12rem" : "3.5rem")};
@@ -104,6 +108,11 @@ const SlickBar = styled.ul`
     img{
       display:${(props) => (props.clicked ? "block" : "none")};
     }
+  }
+  @media(max-height:700px)
+  {
+    top:3rem
+    
   }
 `;
 
@@ -140,6 +149,7 @@ const Text = styled.span`
   overflow: hidden;
   margin-left: ${(props) => (props.clicked ? "1.5rem" : "0")};
   transition: all 0.3s ease;
+  
 `;
 
 

@@ -54,3 +54,9 @@
         font-size: 15px;
     }
 }
+
+@media(max-width:1023px) {
+    .experience1 {
+        max-width: 60vw;
+    }
+}
