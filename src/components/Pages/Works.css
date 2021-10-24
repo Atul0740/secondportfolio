@@ -1,36 +1,12 @@
 .work {
-    width: calc(100vw - 330px);
-    min-height: 130vh;
-    border-radius: 10px;
     background: #fff;
-    padding-left: 200px;
 }
 
-.work_banner {
-    width: 100%;
-    height: 40vh;
-    border-radius: 10px;
-    margin: 20px 0px;
-    background-image: url(https://cdn.w600.comps.canstockphoto.com/brown-gift-boxes-with-red-ribbons-and-stock-photo_csp76498340.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-.work_banner p {
-    width: 90%;
-    padding: 10px;
-    bottom: 20px;
-    left: 5%;
-    background-color: rgba(80, 80, 80, 0.5);
-    color: #fff;
-    border-radius: 5px;
-    backdrop-filter: blur(5px);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+.work-container {
+    padding-left: 20vw;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    min-height: 100vh;
 }
 
 .title1 {
@@ -42,8 +18,7 @@
 }
 
 .active_link {
-    border-bottom: 2px solid #0554d4;
-    background-color: rgb(90, 111, 182);
+    background-color: var(--blue);
     border-radius: 10px;
     color: white;
 }
@@ -61,7 +36,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    z-index: 3;
 }
 
 .work_sublinks nav ul li {
@@ -75,6 +49,10 @@
     color: rgb(214, 45, 39);
     font-size: 25px;
     font-weight: bold;
+}
+
+.work_sublinks nav ul li a:focus {
+    color: white;
 }
 
 .sublinks_underline {
@@ -225,12 +203,6 @@
     object-fit: cover;
     object-position: center;
     margin: 10px;
-}
-
-@media only screen and (max-width:900px) {
-    .work_banner {
-        display: none;
-    }
 }
 
 @media only screen and (max-width:600px) {

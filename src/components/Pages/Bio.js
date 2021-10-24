@@ -23,20 +23,23 @@ const Bio = () => {
             <a href="https://www.github.com" target="_blank" rel="noreferrer">
               <i class="fab fa-github-square text-white" style={{ fontSize: "25px" }}></i></a>
           </div>
-          <p id="para">He lay on his armour-like back, and if he lifted his head a little  he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
-          <button class="btn"><i class="fa fa-download"></i> Download CV</button>
+          
         </div>
         <div className="img-container">
           <img id="image" src={about} alt="" />
         </div>
       </div>
-      <div className="first-container second-container" data-aos="fade-up">
-        <div className="text-container">
-          <p className="email1 second-title" style={{ fontSize: "40px" }}  >Expertise and Interest</p>
+      <div className="support">
+      <p id="para">He lay on his armour-like back, and if he lifted his head a little  he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+      <button class="support-btn"><i class="fa fa-download"></i> Download CV</button>
+      </div>
+      <div className="second-container" data-aos="fade-up">
+        <div className="second-text-container">
+          <p className="second-title">Expertise and Interest</p>
           <video src={video} controls></video>
         </div>
-        <div className="img-container">
-        <p id="para" className='video-text'>He lay on his armour-like back, and if he lifted his head a little  he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+        <div className="second-support">
+          <p className='video-text'>He lay on his armour-like back, and if he lifted his head a little  he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
         </div>
       </div>
     </div>

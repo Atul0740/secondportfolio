@@ -6,7 +6,7 @@ import { HashLink } from "react-router-hash-link";
 
 const Container = styled.div`
   position: fixed;
-
+  padding:10vh 0vh;
   .active {
     border-right: 4px solid var(--white);
 
@@ -57,24 +57,28 @@ const SidebarContainer = styled.div`
   background-color: var(--black);
   width: 3.5rem;
   height: 80vh;
-  margin-top: 1rem;
   border-radius: 0 30px 30px 0;
-  padding: 1rem 0;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 
-  position: relative;
+  // position: relative;
+  @media(max-width:600px)
+  {
+    width:1rem;
+  }
 `;
 
 const Logo = styled.div`
-  width: 2rem;
 
   img {
-    width: 100%;
+    width: 90%;
     height: auto;
+  }
+  @media(max-width:600px)
+  {
+    display:none;
   }
 `;
 
@@ -84,22 +88,29 @@ const SlickBar = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(90, 111, 182);;
-
-  padding: 2rem 0;
+  background-color: #02294f;
+  padding-top:1rem;
 
   position: absolute;
-  top: 6rem;
+  top: 8.5rem;
   left: 0;
 
   width: ${(props) => (props.clicked ? "12rem" : "3.5rem")};
   transition: all 0.5s ease;
   border-radius: 0 30px 30px 0;
+  @media(max-width:600px)
+  {
+    width: ${(props) => (props.clicked ? "12rem" : "1rem")};
+    img{
+      display:${(props) => (props.clicked ? "block" : "none")};
+    }
+  }
 `;
 
 const Item = styled(HashLink)`
   text-decoration: none;
   color: var(--white);
+  
   width: 100%;
   padding: 1rem 0;
   cursor: pointer;
@@ -141,13 +152,15 @@ const Sidebar = () => {
 
   return (
     <Container>
+      
+      <SidebarContainer>
       <Button clicked={click} onClick={() => handleClick()}>
       </Button>
-      <SidebarContainer>
+        
+        <SlickBar clicked={click} >
         <Logo>
           <img src={logo} alt="logo" />
         </Logo>
-        <SlickBar clicked={click} >
           <Item
             onClick={() => setClick(false)}
             smooth

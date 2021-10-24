@@ -43,9 +43,9 @@
     transform: translateY(-20px) !important;
 }
 
-@media (max-width:900px) {
+@media (max-width:1199px) {
     .experience1 {
-        width: 90vw;
+        max-width: 70vw;
     }
     .experience1 .h2 {
         font-size: 18px;
