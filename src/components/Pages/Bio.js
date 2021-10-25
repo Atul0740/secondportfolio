@@ -12,16 +12,16 @@ const Bio = () => {
           <p className="email2" >+91-9876543210</p>
           <div className="icons" >
             <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
-              <i class="fab fa-facebook-square text-white" style={{ fontSize: "25px" }} ></i>
+              <i class="fab fa-facebook-square text-white" style={{ fontSize: "25px",color:"white"  }} ></i>
             </a>
             <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
-              <i class="fab fa-instagram text-white" style={{ fontSize: "25px" }} ></i></a>
+              <i class="fab fa-instagram text-white" style={{ fontSize: "25px",color:"white"  }} ></i></a>
             <a href="https://www.twitte.com" target="_blank" rel="noreferrer">
-              <i class="fab fa-twitter-square text-white" style={{ fontSize: "25px" }} ></i></a>
+              <i class="fab fa-twitter-square text-white" style={{ fontSize: "25px",color:"white" }} ></i></a>
             <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
-              <i class="fab fa-linkedin text-white" style={{ fontSize: "25px" }} ></i></a>
+              <i class="fab fa-linkedin text-white" style={{ fontSize: "25px",color:"white"  }} ></i></a>
             <a href="https://www.github.com" target="_blank" rel="noreferrer">
-              <i class="fab fa-github-square text-white" style={{ fontSize: "25px" }}></i></a>
+              <i class="fab fa-github-square text-white" style={{ fontSize: "25px",color:"white"  }}></i></a>
           </div>
           
         </div>

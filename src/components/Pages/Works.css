@@ -3,8 +3,8 @@
 }
 
 .work-container {
-    padding-left: 20vw;
-    padding-top: 15vh;
+    padding-left: 250px;
+    padding-top: 10vh;
     padding-bottom: 15vh;
     min-height: 100vh;
 }
@@ -17,12 +17,6 @@
     color: var(--blue)
 }
 
-.active_link {
-    background-color: var(--blue);
-    border-radius: 10px;
-    color: white;
-}
-
 .work_sublinks {
     width: 100%;
     margin: 0px auto;
@@ -30,8 +24,6 @@
 
 .work_sublinks nav {
     width: 64vw;
-    overflow-x: scroll;
-    overflow-y: hidden;
 }
 
 .work_sublinks nav ul {
@@ -43,35 +35,26 @@
 .work_sublinks nav ul li {
     text-decoration: none;
     list-style: none;
-    min-width: 17vw;
     min-height: 60px;
     text-align: center;
+    cursor: pointer;
+    font-size: 20px;
 }
 
-.work_sublinks nav ul li a {
-    width: fit-content;
-    min-height: 30px;
-    color: rgb(214, 45, 39);
-    font-size: 25px;
-    font-weight: bold;
+.work-btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: white;
+    font-weight: bolder;
+    color: tomato;
+    transition: all 0.5s ease;
 }
 
-.work_sublinks nav ul li a:focus {
+.active {
     color: white;
-}
-
-.sublinks_underline {
-    width: 100%;
-    height: 2px;
-    background: rgb(238, 238, 238);
-    margin-top: 10px;
-}
-
-.activeclass_underline {
-    width: 75px;
-    height: 2px;
-    /* background-color: #0063ff; */
-    transition: 0.3s ease-in-out;
+    background-color: var(--blue);
 }
 
 
@@ -101,9 +84,6 @@
 }
 
 @media only screen and (max-width:1023px) {
-    .work-container {
-        padding-left: 26vw;
-    }
     .sublinks_underline {
         transform: translateY(0px);
         display: none;
@@ -113,12 +93,6 @@
         height: 80px;
         overflow-x: scroll;
         overflow-y: hidden;
-    }
-    .work_sublinks nav ul li {
-        min-width: 23vw;
-    }
-    .work_sublinks nav ul li a {
-        font-size: 15px;
     }
 }
 
@@ -132,25 +106,13 @@
     .title1 {
         font-size: 40px;
     }
-    .work_sublinks nav ul li {
-        min-width: 30vw;
+    .work-btn {
+        font-size: 15px;
     }
 }
 
 @media(max-width:400px) {
-    .work_sublinks nav ul li {
-        min-width: 30vw;
-    }
-    .work_sublinks nav ul li a {
+    .work-btn {
         font-size: 12px;
-    }
-}
-
-@media(max-width:359px) {
-    .work_sublinks nav ul li {
-        min-width: 40vw;
-    }
-    .work_sublinks nav ul li a {
-        font-size: 10px;
     }
 }

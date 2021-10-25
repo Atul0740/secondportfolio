@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { HashLink } from "react-router-hash-link";
 
 const Container = styled.div`
+  z-index:100;
   position: fixed;
   padding:10vh 0vh;
   padding-right:0;
@@ -29,6 +30,7 @@ const Container = styled.div`
 `;
 
 const Button = styled.button`
+z-index:100;
   background-color: var(--black);
   border: none;
   width: 2.5rem;
@@ -68,6 +70,7 @@ const Button = styled.button`
   }
 `;
 const Buttons = styled.button`
+z-index:100;
   background-color: var(--black);
   border: none;
   width: 2.5rem;
@@ -106,9 +109,10 @@ const Buttons = styled.button`
   }
 `;
 const SidebarContainer = styled.div`
+z-index:100;
   background-color: var(--black);
   width: 3.5rem;
-  height: 80vh;
+  height: 580px;
   border-radius: 0 30px 30px 0;
   display: flex;
   flex-direction: column;
@@ -119,9 +123,14 @@ const SidebarContainer = styled.div`
   @media(max-width:767px){
     width:0rem
   }
+  @media(max-height:700px)
+  {
+    height:80vh
+  }
 `;
 
 const Logo = styled.div`
+z-index:100;
 
   img {
     width: 90%;
@@ -139,6 +148,7 @@ const Logo = styled.div`
 `;
 
 const SlickBar = styled.ul`
+z-index:100;
   color: var(--white);
   list-style: none;
   display: flex;
@@ -177,6 +187,7 @@ const SlickBar = styled.ul`
 `;
 
 const Item = styled(HashLink)`
+z-index:100;
   text-decoration: none;
   color: var(--white);
   
@@ -212,6 +223,7 @@ const Item = styled(HashLink)`
 `;
 
 const Text = styled.span`
+z-index:100;
   width: ${(props) => (props.clicked ? "100%" : "0")};
   overflow: hidden;
   margin-left: ${(props) => (props.clicked ? "1.5rem" : "0")};

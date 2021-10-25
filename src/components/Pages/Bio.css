@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     padding-top: 100px;
-    padding-left: 20vw;
+    padding-left: 250px;
 }
 
 #name {
@@ -28,7 +28,7 @@
 }
 
 .support {
-    padding-left: 20vw;
+    padding-left: 250px;
     padding-top: 1vw;
     width: 800px
 }
@@ -49,7 +49,7 @@
 }
 
 .second-container {
-    padding-left: 20vw;
+    padding-left: 250px;
 }
 
 .second-title {
@@ -72,6 +72,12 @@ video {
     padding: 30px 0px;
 }
 
+@media(min-width:1600px) {
+    .support {
+        min-width: 1200px
+    }
+}
+
 @media(max-width:1023px) {
     video {
         width: 400px;
@@ -83,6 +89,7 @@ video {
         width: 60vw;
     }
     #para {
+        width: 60vw;
         font-size: 20px;
     }
     .second-title {
@@ -94,17 +101,15 @@ video {
     .second-support {
         width: 60vw;
     }
-    .first-container,
-    .support,
-    .second-container {
-        padding-left: 26vw;
-    }
     .img-container {
         padding-right: 2vw;
     }
 }
 
 @media(max-width:767px) {
+    #bio {
+        width: 100vw;
+    }
     .first-container {
         flex-direction: column-reverse;
     }
@@ -113,6 +118,10 @@ video {
     .second-container,
     .img-container {
         padding-left: 20px;
+    }
+    .support,
+    .second-support {
+        width: 90vw;
     }
     .img-container {
         padding: 0;
