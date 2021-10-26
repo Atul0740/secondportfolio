@@ -5,7 +5,7 @@ const Skills = () => {
   return (
     <div className='skill' id='skills'>
       <div className="skill-container">
-        <div className="title" data-aos="flip-right" data-aos-once="true" >My Skills</div>
+        <div className="title"  >My Skills</div>
         <div className="skill-bars" data-aos="fade-up">
           <div class="bar">
             <div class="info">

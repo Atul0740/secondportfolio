@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "../../assets/about.png";
 import Home from "../../assets/home-solid.svg";
 import styled from "styled-components";
 import { HashLink } from "react-router-hash-link";
+
 
 const Container = styled.div`
   z-index:100;
@@ -83,7 +84,6 @@ z-index:100;
   align-items: center;
 
   position: relative;
-
   &::before,
   &::after {
     content: "";
@@ -139,11 +139,13 @@ z-index:100;
   cursor:pointer;
   @media(max-width:767px)
   {
-    display:none;
+    img{
+      left:-27vw
+    }
   }
   @media(max-height:700px)
   {
-    display:none;
+    
   }
 `;
 
@@ -166,17 +168,22 @@ z-index:100;
   border-radius: 0 30px 30px 0;
   @media(max-width:767px)
   {
-    width: ${(props) => (props.clicked ? "80vw" : "0rem")};
+    width: ${(props) => (props.clicked ? "100vw" : "0rem")};
     display:${(props) => (props.clicked ? "flex" : "none")};
+    
     img{
       display:${(props) => (props.clicked ? "block" : "none")};
+      width: ${(props) => (props.clicked ? "100%" : "0rem")};
+      position:relative;
     }
-    flex-direction:row;
-    flex-wrap:wrap;
+    
     position: relative;
-    left: 40vw;
-    top: -10vw;
-    font-size:80%
+    right:0;
+    top: 2vw;
+    font-size:80%;
+    min-width:100vw;
+    min-height:100vh;
+    left:50vw;
   }
   @media(max-width:359px)
   {
@@ -230,18 +237,61 @@ z-index:100;
   transition: all 0.3s ease;
   
 `;
+let useClickOutside = (handler) => {
+  let domNode = useRef();
+
+  useEffect(() => {
+    let maybeHandler = (event) => {
+      if (!domNode.current.contains(event.target)) {
+        handler();
+      }
+    };
+
+    document.addEventListener("mousedown", maybeHandler);
+
+    return () => {
+      document.removeEventListener("mousedown", maybeHandler);
+    };
+  });
+
+  return domNode;
+};
 
 
 const Sidebar = () => {
-  const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
-
-  const style={position:"relative",left:"82vw"}
   
+
+  const [click, setClick] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleClick = () => {
+    if (click === false) {
+      setScrollPosition(window.pageYOffset); 
+    }
+    if (click === true) {
+      setTimeout(() => window.scrollTo(0, scrollPosition),0);
+    }
+    setClick(!click);
+
+  }
+
+  const style={position:"relative",left:"0vw"}
+  let domNode = useClickOutside(() => {
+    setClick(false);
+  });
+  useEffect(() => {
+    const body = document.querySelector('body');
+    
+    if(window.innerWidth<768)
+    {
+      body.style.overflow=click?'hidden':''
+    }
+    
+  }, [click])
   
 
   return (
-    <Container>
+    <Container ref={domNode}>
+      
       <div style={style}>
       <Buttons clicked={click} onClick={() => handleClick()}>
       </Buttons>
@@ -317,11 +367,14 @@ const Sidebar = () => {
           >
             <img src="https://img.icons8.com/external-itim2101-fill-itim2101/64/000000/external-skill-human-resource-itim2101-fill-itim2101-1.png" alt=""/>
             <Text clicked={click}>Skills</Text>
+            
           </Item>
+         
         </SlickBar>
-
+        
         
       </SidebarContainer>
+      
     </Container>
   );
 };
